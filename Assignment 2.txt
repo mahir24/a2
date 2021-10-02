@@ -1,0 +1,51 @@
+1) How many unique customers reviewed products in this file?
+	awk -F"\t" '{print $2}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | wc
+How many unique product ids were reviewed in this file?
+	awk -F"\t" '{print $4}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | wc
+How many unique product titles were reviewed in this file? Is it the same as the number of product ids? 
+	awk -F"\t" '{print $6}' amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | wc
+ 	
+	1502381 Unique customers reviewed
+	779734 Unique product ids reviewed
+	713712 unique product titles
+	Not the same number as product ids.
+You can pick a product topic that interests you, see the column product_topic (if there is only one product_topic use that). You probably want to use for loops for the rest:
+
+2) Select 100 different customers ids that did more than one review. Put all the helpfulness scores and review scores (2 columns in each file) in different files named after CUSTOMERS/customerid.txt (replace customerid with the customer id).
+	head -100 customerids.txt.sorted.uniqcount.reversed >customerids.100.txt	
+	UNIQ_IDS="$(awk '{print $2}' < customerids.100.txt | sort | uniq)"
+	for i in $UNIQ_IDS; do egrep "   $i       " amazon_reviews_us_Books_v1_02.tsv > tempCustomers/$i.txt; done //for some reason only gives me 66?
+	for i in $UNIQ_IDS; do cut -d "    " -f 8,9 $i.txt > ~/A2/CUSTOMERS/$i.helpfulnessReviews.txt; done
+
+3) Select 100 different product ids. Put all the helpfulness scores and review scores (2 columns in each file)  in different files named after PRODUCTS/productid.txt (replace productid with the product id).
+	head -100 productidsids.txt.sorted.uniqcount.reversed productids.100.txt	
+	UNIQ_IDS="$(awk '{print $2}' < productids.100.txt | sort | uniq)"
+	for i in $UNIQ_IDS; do egrep "   $i       " amazon_reviews_us_Books_v1_02.tsv > tempproducts/$i.txt; done
+	for i in $UNIQ_IDS; do cut -d "    " -f 8,9 $i.txt > ~/A2/PRODUCTS/$i.helpfulnessReviews.txt; done
+
+You could use cut or awk for this, as well as paste, grep.
+
+4) Write an alias called "l" to display the files in the current directory in list format
+   and reverse chronologically-ordered as a short name for: ls -latr.
+	alias l='ls -lastr'
+
+5) Write an alias called "w" to display the number of
+   files in the current directory as a short name for: ls -la | wc.
+	alias w='ls -la | wc'
+
+6) Put these aliases in your .bashrc file, so they will be re-used everytime in the future.
+	vim ~/.bashrc
+	
+7) Verify you have 100 files in each of the CUSTOMERS and PRODUCTS directory (plus the usual hidden files . and ..)
+	w
+
+8) - the correlation between helpfulness scores and review scores per customer. What is the range of the correlation scores amongst different customers, in other words which customers have most and least correlated helpfulness scores and review scores? You may use this command to compute the correlation:
+	for file in ../CUSTOMERS/*.helpfulnessReviews.txt; do ./datamash -W ppearson 2:1 < ../CUSTOMERS/$file;done
+
+9) - For each customer's file compute his/her average (mean) helpfulness score. What is the range of different average helpfulnesses over all customers, in other words which customers gave the most helpful and the least helpful reviews?
+	for FILE in ../A2/CUSTOMERS/*.helpfulnessReviews.txt; do CORR=./datamash …. <$FILE ; echo "$FILE $CORR" ; done
+ 
+
+10) - Do a similar thing for the products: For each product's file compute its average (mean) star_rating score. What is the range of different average star_ratings over all products, in other words which products got the highest and lowest star_ratings reviews?
+	for FILE in ../PRODUCTS/*.helpfulnessReviews.txt; do CORR=./datamash …. <$FILE ; echo "$FILE $CORR" ; done
+

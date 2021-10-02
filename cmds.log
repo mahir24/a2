@@ -1,0 +1,679 @@
+
+  535  mkdir A2
+  536  cd WS4
+  537  ls
+  538  cd ~/A2
+  539  ls
+  540  history
+  541  head -n 1 amazon_reviews_us_Books_v1_02.tsv
+  542  clear
+  545  history
+  548  history
+  549  ls
+  550  total=0;count=0
+  551  mkdir CUSTOMERS PRODUCTS
+  552  head -n 1 amazon_reviews_us_Books_v1_02.tsv
+  553  cd A2
+  554  ls
+  555  history
+  556  ls
+  557  head -n 1 amazon_reviews_us_Books_v1_02.tsv
+  558  head customerids.txt.sorted.uniqcount.reversed
+  559  CUSTMERIDS= "$(awk '{print $$2}' < customerids.txt.sorted.uniqcount.reversed"
+  560  CUSTMERIDS= "$(awk '{print $$2}' < customerids.txt.sorted.uniqcount.reversed";
+  561  head;
+  562  CUSTMERIDS= "$(awk '{print $2}' < customerids.txt.sorted.uniqcount.reversed"
+  563  cat UNIQ_IDS
+  564  echo UNIQ_IDS
+  565  echo $UNIQ_IDS
+  566  head customerids.txt.sorted.uniqcount.reversed
+  567  history
+  568  cut -d " " -f 2  customerids.txt.sorted.uniqcount.reversed> customerids.txt
+  569  head customerids.txt
+  570  head customerids.txt.sorted.uniqcount.reversed
+  571  head -100 head customerids.txt.sorted.uniqcount.reversed
+  572  head -100 head customerids.txt.sorted.uniqcount.reversed >customerids.100.txt
+  573  head -100 customerids.txt.sorted.uniqcount.reversed >customerids.100.txt
+  574  ls
+  575  head customerids.100.txt
+  576  CUSTMERIDS= "$(awk '{print $2}' < customerids.100.txt"; | sort | uniq)"
+  577  UNIQ_IDS="$(awk '{print $2}' < customerids.100.txt | sort | uniq)"
+  578  for i in UNIQ_IDS; do egrep "	^\\S+ +$i	" amazon_reviews_us_Books_v1_02.tsv > $i.txt; done;
+  579  ls
+  580  for i in UNIQ_IDS; do egrep "	^\\S+ +$i	" amazon_reviews_us_Books_v1_02.tsv > CUSTOMERS/$i.txt; done;
+  581  cd CUSTOMERS
+  582  ls
+  583  cd ..
+  584  ls
+  585  echo $UNIQ_IDS
+  586  ls
+  587  head UNIQ_IDS.txt
+  588  cat UNIQ_IDS.txt
+  589  rm UNIQ_IDS.txt
+  590  cd CUSTOMERS
+  591  ls
+  592  cat UNIQ_IDS.txt
+  593  rm UNIQ_IDS.txt
+  594  cd ..
+  595  echo $UNIQ_IDS
+  596  for i in UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > CUSTOMERS/$i.txt; done;
+  597  ls
+  598  cd CUSTOMERS
+  599  ls
+  600  cat UNIQ_IDS.txt
+  601  rm UNIQ_IDS.txt
+  602  for i in UNIQ_IDS; do egrep "	^\\S+ +$i	" > CUSTOMERS/$i.txt; done;
+  603  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > CUSTOMERS/$i.txt; done;
+  604  for i in $UNIQ_IDS; do "egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv" > CUSTOMERS/$i.txt; done;
+  605  ls
+  606  cd ..
+  607  ls
+  608  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > CUSTOMERS/$i.txt; done;
+  609  ls
+  610  cd CUSTOMERS
+  611  ;s
+  612  ls
+  613  cat 51706075.txt
+  614  ls
+  615  cd ..
+  616  rm -r CUSTOMERS
+  617  ls
+  618  mkdir CUSTOMERS
+  619  history
+  620  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv >cut -d " " -f 9 45041039.txt > 45041039.helpfulness.txt CUSTOMERS/$i.txt; done;
+  621  rm -r CUSTOMERS
+  622  for i in $UNIQ_IDS; do egrep "   $i      " amazon_reviews_us_Books_v1_02.tsv | > tempCustomers/$i.txt; done;
+  623  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempCUSTOMERS/$i.txt; done;
+  624  ls
+  625  mkdir tempCustomers
+  626  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempCUSTOMERS/$i.txt; done;
+  627  for i in $UNIQ_IDS; do egrep "   $i      " amazon_reviews_us_Books_v1_02.tsv > CUSTOMERS/$i.txt; done;
+  628  ls
+  629  mkdir CUSTOMERS
+  630  for i in $UNIQ_IDS; do egrep "	$i	 " amazon_reviews_us_Books_v1_02.tsv > CUSTOMERS/$i.txt; done;
+  631  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempCustomers/$i.txt; done;
+  632  ls
+  633  cd A2
+  634  ls
+  635  cd tempCustomers
+  636  ls
+  637  $UNIQ_IDS
+  638  echo $UNIQ_IDS
+  639  UNIQ_IDS="$(awk '{print $2}' < customerids.100.txt | sort | uniq)"
+  640  cd //
+  641  cd ~/A2
+  642  ls
+  643  UNIQ_IDS="$(awk '{print $2}' < customerids.100.txt | sort | uniq)"
+  644  rm -r tempCustomers
+  645  rm -r CUSTOMERS
+  646  head n -1 amazon_reviews_us_Books_v1_02.tsv
+  647  history
+  648  for i in $UNIQ_IDS; do egrep "   $i      " amazon_reviews_us_Books_v1_02.tsv | cut -d "  " -f 8,9 amazon_reviews_us_Books_v1_02.tsv> CUSTOMERS/$i.helpfulnessReviews.txt; done
+  649  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv | cut -d "	" -f 8,9 amazon_reviews_us_Books_v1_02.tsv> CUSTOMERS/$i.helpfulnessReviews.txt; donefor i in $UNIQ_IDS; do egrep "   $i      " amazon_reviews_us_Books_v1_02.tsv | cut -d "  " -f 8,9 amazon_reviews_us_Books_v1_02.tsv> CUSTOMERS/$i.helpfulnessReviews.txt; done
+  650  for i in $UNIQ_IDS; do egrep "   $i       " amazon_reviews_us_Books_v1_02.tsv > CUSTOMERS/$i.txt; done
+  651  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > CUSTOMERS/$i.txt; done
+  652  la
+  653  echo $UNIQ_IDS
+  654  echo $UNIQ_IDS| wc
+  655  customerids.100.txt wc
+  656  customerids.100.txt |wc
+  657  wc customerids.100.txt
+  658  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > CUSTOMERS/$i.txt; done;
+  659  mkdir CUSTOMERS
+  660  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > CUSTOMERS/$i.txt; done;
+  661  cd CUSTOMERS
+  662  ls
+  663  rm 33993847.txt
+  664  cd ..
+  665  ls
+  666  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv|  cut -d "  " -f 8,9 amazon_reviews_us_Books_v1_02.tsv> CUSTOMERS/$i.helpfulnessReviews.txt ; done;
+  667  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv|  cut -d "	" -f 8,9 amazon_reviews_us_Books_v1_02.tsv> CUSTOMERS/$i.helpfulnessReviews.txt ; done;
+  668  cd CUSTOMERS
+  669  ls
+  670  cat 51204643.helpfulnessReviews.txt
+  671  echo 51204643.helpfulnessReviews.txt
+  672  head 51204643.helpfulnessReviews.txt
+  673  total=1;
+  674  total > test.txt
+  675  vi
+  676  cd ..
+  677  ls
+  678  rm -r CUSTOMERS
+  679  mkdir tempCustomers
+  680  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempCustomers/$i.txt; done;
+  681  cd tempCustomers
+  682  ls
+  683  cd //
+  684  cd ~/A2
+  685  ls
+  686  mkdir CUSTOMERS
+  687  ls
+  688  cd tempCUSTOMERS
+  689  cd tempCustomers
+  690  ls
+  691  for i in $UNIQ_IDS; do cut -d "	" -f 8,9 $i.txt > CUSTOMERS/$i.helpfulnessReviews.txt; done
+  692  for i in $UNIQ_IDS; do cut -d "	" -f 8,9 $i.txt > $i.helpfulnessReviews.txt; done
+  693  ls
+  694  cat 51388692.helpfulnessReviews.txt
+  695  cd ..
+  696  rm -r tempCustomers
+  697  mkdir tempCustomers
+  698  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempCustomers/$i.txt; done;
+  699  cd tempCustomers
+  700  l
+  701  cd ..
+  702  ;s
+  703  ls
+  704  cd CUSTOMERS
+  705  ls
+  706  cd ~/A2/tempCustomers
+  707  ls
+  708  for i in $UNIQ_IDS; do cut -d "	" -f 8,9 $i.txt > ~/A2/CUSTOMERS/$i.helpfulnessReviews.txt; done
+  709  cd ~/A2/CUSTOMERS
+  710  ls
+  711  cat 53087372.helpfulnessReviews.txt
+  712  cd ..
+  713  ls
+  714  history
+  715  head -100 productids.txt.sorted.uniqcount.reversed >productids.100.txt
+  716  ls
+  717  wc productids.100.txt
+  718  mkdirtempProducts
+  719  mkdir tempProducts
+  720  UNIQ_IDS="$(awk '{print $2}' < productids.100.txt | sort | uniq)"
+  721  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempProducts/$i.txt; done
+  722  UNIQ_IDS="$(awk '{print $2}' < productids.100.txt | sort | uniq)"
+  723  cd A2
+  724  ls
+  725  UNIQ_IDS="$(awk '{print $2}' < productids.100.txt | sort | uniq)"
+  726  cd tempProducts
+  727  ls
+  728  for i in $UNIQ_IDS; do cut -d "	" -f 8,9 $i.txt > ~/A2/PRODUCTS/$i.helpfulnessReviews.txt; done
+  729  cd ..
+  730  cd PRODUCTS
+  731  ls
+  732  cd ..
+  733  alias l='ls -lastr'
+  734  ls
+  735  l
+  736  alias w='ls -la | wc'
+  737  vim ~/.bashrc
+  738  cd PRODUCTS
+  739  l
+  740  w
+  741  cd..
+  742  cd ..
+  743  cd CUSTOMERS
+  744  w
+  745  ls
+  746  cd ..
+  747  cd tempCustomers
+  748  w
+  749  ls
+  750  cd ..
+  751  ls
+  752  cd CUSTOMERS
+  753  ls
+  754  cat 53085673.helpfulnessReviews.txt
+  755  w
+  756  cd ..
+  757  ls
+  758  rm -r CUSTOMERS tempCUSTOMERS
+  759  ls
+  760  rm -r tempCustomers
+  761  UNIQ_IDS="$(awk '{print $2}' < productids.100.txt | sort | uniq)"
+  762  UNIQ_IDS="$(awk '{print $2}' < customerids.100.txt | sort | uniq)"
+  763  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempCustomers/$i.txt; done
+  764  mkdir tempCustomers
+  765  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempCustomers/$i.txt; done
+  766  cd A2
+  767  cd tempCustomers
+  768  ls
+  769  cd ..
+  770  ls
+  771  wc tempcustomerids.100.txt
+  772  wc customerids.100.txt
+  773  cd tempCustomers
+  774  w
+  775  cd ..
+  776  rm -r tempCustomers
+  777  mkdir tempCustomers
+  778  UNIQ_IDS="$(awk '{print $2}' < customerids.100.txt | sort | uniq)"
+  779  customerids.100.txt
+  780  head customerids.100.txt
+  781  UNIQ_IDS="$(awk '{print $2}' < customerids.100.txt | sort | uniq)"
+  782  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempCustomers/$i.txt; done
+  783  cd tempCustomers
+  784  w
+  785  ls
+  786  cd ..
+  787  ls
+  788  mkdir CUSTOMERS
+  789  cd tempCustomers
+  790  for i in $UNIQ_IDS; do cut -d "	" -f 8,9 $i.txt > ~/A2/CUSTOMERS/$i.helpfulnessReviews.txt; done
+  791  cd ..
+  792  cd CUSTOMERS
+  793  w
+  794  cd ..
+  795  sudo apt install datamash
+  796  wget http://ftp.gnu.org/gnu/datamash/datamash-1.3.tar.gz
+  797  tar -xzf datamash-1.3.tar.gz
+  798  cd datamash-1.3
+  799  ./configure
+  800  make
+  801  make check
+  802  cd ~/datamash-1.3
+  803  sudo make install
+  804  ls
+  805  cd ~/WS3
+  806  ls
+  807  mkdir
+  808  mkdir test
+  809  cd ~/datamash-1.3
+  810  rm test
+  811  rm -r test
+  812  cd ~/A2
+  813  ls
+  814  cd ~/datamash-1.3
+  815  cd datamash-1.3
+  816  cd ~/datamash-1.3
+  817  ./datamash  -W ppearson 1:2 < ../files/c.txt 
+  818  cd //
+  819  ls
+  820  cd ~
+  821  cd A2
+  822  ls
+  823  cd CUSTOMERS
+  824  w
+  825  cd ./datamash-a.3
+  826  cd ./datamash-1.3
+  827  cd ../datamash-1.3
+  828  cd ../CUSTOMERS
+  829  ls
+  830  cd ../datamash-1.3
+  831  for file in ../CUSTOMERS/*.helpfulnessReviews.txt; do ./datamash -W ppearson 2:1 < ../CUSTOMERS/$file;done
+  832  cd ..
+  833  ls
+  834  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  835  history
+  836  ls
+  837  cd CUSTOMERS
+  838  l
+  839  sls
+  840  ls
+  841  for i in `cat 33993847.helpfulnessReviews.txt` ; do total=$(echo $total+$i | bc); ((count++)); done;
+  842  total=0;count=0;
+  843  for i in `cat 33993847.helpfulnessReviews.txt` ; do total=$(echo $total+$i | bc); ((count++)); done;
+  844  echo $total
+  845  echo count
+  846  echo $count
+  847  ls
+  848  cd ..
+  849  UNIQ_IDS="$(awk '{print $2}' < customerids.100.txt | sort | uniq)"
+  850  cd CUSTOMERS
+  851  total=0;count-0;
+  852  total=0;count=0;
+  853  for i in $UNIQ_IDS; do for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do total=$(echo $total+$i | bc); ((count++)); done;$count=0;$total=0; done
+  854  for i in $UNIQ_IDS; do for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do total=$(echo $total+$i | bc); ((count++)); done; done
+  855  echo $total
+  856  echo $count
+  857  $total=0; $count=0;
+  858  $total=0;$count=0;
+  859  $total=0;
+  860  total=0;count=0;
+  861  for i in $UNIQ_IDS; do for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do total=$(echo $total+$i | bc); ((count++)); done;count=0;total=0; done
+  862  mkdir totalCount
+  863  for i in $UNIQ_IDS; do for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do total=$(echo $total+$i | bc); ((count++)); done; echo countfor i in $UNIQ_IDS; do for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do total=$(echo $total+$i | bc); ((count++)); done; echo count > totalCount/$UNIQ_IDS.toalCount.txt;count=0;total=0; done > totalCount/$UNIQ_IDS.toalCount.txt;count=0;total=0; done
+  864  echo $count $total
+  865  echo $count $total > test.txt
+  866  ls
+  867  cat test.txt
+  868  rm test.txt
+  869  for i in $UNIQ_IDS; do for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do total=$(echo $total+$i | bc); ((count++)); done; echo total count > totalCount/$UNIQ_IDS.toalCount.txt;count=0;total=0; done
+  870  for i in $UNIQ_IDS; do for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do total=$(echo $total+$i | bc); ((count++)); done; echo total count > "totalCount/$UNIQ_IDS.toalCount.txt";count=0;total=0; done
+  871  ls
+  872  cd totalCount.txt
+  873  cd totalCount
+  874  ls
+  875  w
+  876  ls -latr
+  877  cd ..
+  878  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$i | bc); ((count++));     done;      echo totalcount > totalCount/$i.totalCount.txt;count=0;total=0;  done;
+  879  ls
+  880  cd totalCount
+  881  w
+  882  ls
+  883  cat 33993847.totalCount.txt
+  884  cd ..
+  885  ls
+  886  rm -r totalCount
+  887  total=;
+  888  total=0;count=0;
+  889  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$i | bc); ((count++));     done;      echo $total $count > totalCount/$i.totalCount.txt;$count=0;$total=0;  done;
+  890  echo $toal
+  891  echo $total
+  892  total=0;count=0;
+  893  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$i | bc); ((count++));     done;      echo total count > totalCount/$i.totalCount.txt;$count=0;$total=0;  done;
+  894  total=0;count=0;
+  895  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$i | bc); ((count++));     done;      echo total count > totalCount/$i.totalCount.txt;$count=0;$total=0;
+  896  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$i | bc); ((count++));     done;      echo total count > totalCount/$i.totalCount.txt;count=0;total=0;  done;
+  897  for i in $UNIQ_IDS; do >     for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do
+  898  >         total=$(echo $total+$i | bc); ((count++));
+  899  >     done;
+  900  >      echo totalcount > totalCount/$i.totalCount.txt;count=0;total=0;
+  901  >  done;
+  902  ls
+  903  rm done echo 'total =53096149'
+  904  ls
+  905  mkdir totalCount
+  906  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$i | bc); ((count++));     done;      echo total count > totalCount/$i.totalCount.txt;count=0;total=0;  done;
+  907  cd totalCount
+  908  l
+  909  ls
+  910  cat 33993847.totalCount.txt
+  911  cd ..
+  912  rm -r totalCount
+  913  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$i | bc); ((count++));     done;      echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;
+  914  mkdir totalCount
+  915  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$i | bc); ((count++));     done;      echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;  done;
+  916  cd totalCount
+  917  cat 33993847.totalCount.txt
+  918  ls
+  919  cat 51204643.totalCount.txt
+  920  cd ..
+  921  ls
+  922  for i in ' cat 51204643.helpfulnessReviews.txt'; do total=$(echo $total+$i | bc); ((count++)); done;
+  923  total=0;count=0;
+  924  for i in ' cat 51204643.helpfulnessReviews.txt'; do total=$(echo $total+$i | bc); ((count++)); done;
+  925  for i in 'cat 51204643.helpfulnessReviews.txt'; do total=$(echo $total+$i | bc); ((count++)); done;
+  926  history
+  927  total=0;count=0;
+  928  for i in `cat 51204643.helpfulnessReviews.txt` ; do total=$(echo $total+$i | bc); ((count++)); done;
+  929  echo $total $count
+  930  cd totalCount
+  931  ls
+  932  cat 51204643.totalCount.txt
+  933  cat 33993847.totalCount.txt
+  934  cd ..
+  935  rm -r totalCount
+  936  mkdir totalCount
+  937  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$j | bc); ((count++));     done;      echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;  done;
+  938  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$j | bc); ((count++));     done;      echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;  done;
+  939  for i in $UNIQ_IDS; do >     for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do
+  940  >         total=$(echo $total+$i | bc); ((count++));
+  941  >     done;
+  942  >      echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;
+  943  >  done;
+  944  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$j | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;   done;
+  945  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$j | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;
+  946  ls
+  947  rm done echo 
+  948  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$j | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;
+  949  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$i | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;   done;
+  950  rm -r totalCount
+  951  mkdir totalCount
+  952  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.helpfulnessReviews.txt'; do          total=$(echo $total+$j | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;   done;
+  953  for i in $UNIQ_IDS; do      for j in `cat $UNIQ_IDS.helpfulnessReviews.txt`; do          total=$(echo $total+$j | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;   done;
+  954  ls
+  955  cd totalCount
+  956  ls
+  957  cat 33993847.totalCount.txt
+  958  cd ..
+  959  rm -r totalCount
+  960  mkdir totalCount
+  961  total=0;count=0;
+  962  for i in $UNIQ_IDS; do      for j in `cat $UNIQ_IDS.helpfulnessReviews.txt`; do          total=$(echo $total+$j | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;   done;
+  963  cd totalCount
+  964  w
+  965  ls
+  966  cat 33993847.totalCount.txt
+  967  cat 51204643.totalCount.txt
+  968  total=0; count=0;
+  969  cd ..
+  970  rm -r totalCount
+  971  ls
+  972  cat 33993847.helpfulnessReviews.txt
+  973  cd ~/WS4
+  974  ls
+  975  cd CUSTOMERS
+  976  ls
+  977  cd ..
+  978  cd PRODUCTS
+  979  ls
+  980  cat 0316666343.txt
+  981  ls
+  982  total=0;count=0;
+  983  cd ..
+  984  ls
+  985  cat 0316666343.helpfulness.txt
+  986  cd PRODUCTS
+  987  0316666343.helpfulness.txt
+  988  cat 0316666343.helpfulness.txt
+  989  cd ~/A2
+  990  ls
+  991  cd PRODUCTS
+  992  l
+  993  sls
+  994  l
+  995  ls
+  996  cat 0060193395.helpfulnessReviews.txt
+  997  cd ..
+  998  ls
+  999  head -n 1 amazon_reviews_us_Books_v1_02.tsv
+ 1000  cd tempProducts
+ 1001  cd ..
+ 1002  UNIQ_IDS="$(awk '{print $2}' < productids.100.txt | sort | uniq)"
+ 1003  cd tempProducts
+ 1004  ls
+ 1005  cd ../PRODCUTS
+ 1006  cd ../PRODUCTS
+ 1007  ls
+ 1008  mkdir starRating
+ 1009  cd ../tempProducts
+ 1010  for i in $UNIQ_IDS; do cut -d "    " -f 8 $i.txt > ~/A2/PRODUCTS/starRating/$i.stars.txt; done
+ 1011  for i in $UNIQ_IDS; do cut -d "	" -f 8 $i.txt > ~/A2/PRODUCTS/starRating/$i.stars.txt; done
+ 1012  cd../PRODCUTS
+ 1013  cd../PRODUCTS
+ 1014  cd..
+ 1015  cd ../PRODUCTS
+ 1016  ls
+ 1017  cd starRating
+ 1018  ls
+ 1019  cat 0060193395.stars.txt
+ 1020  ls
+ 1021  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.stars.txt'; do          total=$(echo $total+$j | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;
+ 1022  mkdir totalCount
+ 1023  for i in $UNIQ_IDS; do      for j in 'cat $UNIQ_IDS.stars.txt'; do          total=$(echo $total+$j | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;   done;
+ 1024  for i in $UNIQ_IDS; do      for j in `cat $UNIQ_IDS.stars.txt`; do          total=$(echo $total+$j | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;   done;
+ 1025  ls
+ 1026  cd totalCount
+ 1027  ls
+ 1028  cat 0060193395.totalCount.txt
+ 1029  cat 014131088X.totalCount.txt
+ 1030  cat 0060514558.totalCount.txt
+ 1031  cat 0399142789.totalCount.txt
+ 1032  cat 0066214130.totalCount.txt
+ 1033  cd ..
+ 1034  rm -r starRating
+ 1035  cd totalCount
+ 1036  ls
+ 1037  cat 0156027321.totalCount.txt
+ 1038  cd ..
+ 1039  rm -r totalCount
+ 1040  ls
+ 1041  cat 0316011770.stars.txt
+ 1042  cat 0060193395.stars.txt
+ 1043  ls
+ 1044  echo $total
+ 1045  total=0;count=0;
+ 1046  ls
+ 1047  for i in `cat 0060193395.stars.txt` ; do total=$(echo $total+$i | bc); ((count++)); done;
+ 1048  echo $total $count
+ 1049  mkdir totalCount
+ 1050  for i in $UNIQ_IDS; do      for j in `cat $UNIQ_IDS.stars.txt`; do          total=$(echo $total+$j | bc); ((count++));      done;       echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;count=0;total=0;   done;
+ 1051  cd totalCount
+ 1052  l
+ 1053  sls
+ 1054  ls
+ 1055  cat 0060193395.totalCount.txt
+ 1056  cat  0060761288.totalCount.txt
+ 1057  cd ..
+ 1058  rm totalCount
+ 1059  rm -r  totalCount
+ 1060  echo $total
+ 1061  echo $count
+ 1062  total=0;count=0;
+ 1063  for i in `cat 0060193395.stars.txt` ; do total=$(echo $total+$i | bc); ((count++)); done;
+ 1064  echo $total $count
+ 1065  cd ..
+ 1066  ls
+ 1067  cd ..
+ 1068  ls
+ 1069  UNIQ_IDS="$(awk '{print $2}' < productids.100.txt | sort | uniq)"
+ 1070  echo $UNIQ_IDS
+ 1071  cd PRODUCTS
+ 1072  cd starRating
+ 1073  ls
+ 1074  for i in $UNIQ_IDS; do      for j in `cat $UNIQ_IDS.stars.txt`; do          total=$(echo $total+$j | bc); ((count++));          echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;      done;       count=0;total=0;   done;
+ 1075  ls
+ 1076  mkdir totalCount
+ 1077  for i in $UNIQ_IDS; do      for j in `cat $UNIQ_IDS.stars.txt`; do          total=$(echo $total+$j | bc); ((count++));          echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;      done;       count=0;total=0;   done;
+ 1078  ls
+ 1079  cd totalCount
+ 1080  ls
+ 1081  cat 0060193395.totalCount.txt
+ 1082  cd ..
+ 1083  rm -r totalCount
+ 1084  total=0;count=0;
+ 1085  ls
+ 1086  mkdir totalCount
+ 1087  for i in $UNIQ_IDS; do      for j in `cat $UNIQ_IDS.stars.txt`; do          total=$(echo $total+$j | bc); ((count++));          echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;      done;       count=0;total=0;   done;
+ 1088  ls
+ 1089  cd totalCount
+ 1090  ls
+ 1091  cat 0060193395.totalCount.txt
+ 1092  cd..
+ 1093  cd ..
+ 1094  for i in `cat 0060193395.stars.txt` ; do total=$(echo $total+$i | bc); ((count++)); done;
+ 1095  echo $total $count
+ 1096  total=0; count=0;
+ 1097  for i in `cat 0060193395.stars.txt` ; do total=$(echo $total+$i | bc); ((count++)); done;
+ 1098  echo $total $count
+ 1099  la
+ 1100  rm totalCount
+ 1101  rm -r totalCount
+ 1102  mkdirtotalCount
+ 1103  mkdir totalCount
+ 1104  total=0;count=0;
+ 1105  for i in $UNIQ_IDS; do     for j in `cat $UNIQ_IDS.stars.txt`; do         total=$(echo $total+$j | bc); ((count++));     done;     echo "total= $total, count= $count" > totalCount/$i.totalCount.txt;     count=0;total=0;   done;
+ 1106  ls
+ 1107  cd totalCout
+ 1108  cd totalCount
+ 1109  ls
+ 1110  cat 0060193395.totalCount.txt
+ 1111  cd ..
+ 1112  total=0;count=0;
+ 1113  for i in `cat 0060193395.stars.txt` ; do total=$(echo $total+$i | bc); ((count++)); done;
+ 1114  echo $total $count
+ 1115  tmux
+ 1116  ls
+ 1117  cd WS5
+ 1118  ls
+ 1119  cd tempCustomers
+ 1120  ls
+ 1121  cd ..
+ 1122  rm tempCustomers
+ 1123  rm -r  tempCustomers
+ 1124  UNIQ_IDS="$(awk '{print $2}' < customerids.1000.txt | sort | uniq)"
+ 1125  for i in {1..10}; do echo "$i"; done;
+ 1126  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempCustomers/$i.txt; echo "$i"; done;
+ 1127  ls
+ 1128  mkdir tempCustomers
+ 1129  ls
+ 1130  for i in $UNIQ_IDS; do egrep "	$i	" amazon_reviews_us_Books_v1_02.tsv > tempCustomers/$i.txt; echo "$i"; done;
+ 1131  ls
+ 1132  cd WS5
+ 1133  ls
+ 1134  cd tempCustomers
+ 1135  ls
+ 1136  cd .. 
+ 1137  rm -r tempCustomers
+ 1138  cat ws5.txt
+ 1139  em ws5.txt
+ 1140  rm ws5.txt
+ 1141  ls
+ 1142  history
+ 1143  script ws5.txt
+ 1144  history > cmds.log
+ 1145  ls
+ 1146  cat ws5.txt
+ 1147  ls
+ 1148  git init
+ 1149  perl -pe 's/\x1b\[[0-9;]*[mG]//g' ws5.txt > ws5.txt.clean
+ 1150  tr -cd '\11\12\15\40-\176' < ws5.txt.clean > ws5.txt.clean2
+ 1151  ls
+ 1152  git add ws5.txt.clean2 cmds.log
+ 1153  git status
+ 1154  git commit -m "Worksheet 5"
+ 1155  git remote add origin https://github.com/mahir24/ws5.git
+ 1156  git push -u origin master
+ 1157  cd ..
+ 1158  cd A2
+ 1159  ls
+ 1160  history
+ 1161  clear
+ 1162  ls
+ 1163  cd CUSTOMERS
+ 1164  ls
+ 1165  cd ..
+ 1166  ls
+ 1167  UNIQ_IDS="$(awk '{print $2}' < customerids.100.txt | sort | uniq)"
+ 1168  cd tempCustomers
+ 1169  ls
+ 1170  for i in $UNIQ_IDS; do cut -d "    " -f 8,9 $i.txt > ~/A2/CUSTOMERS/$i.helpfulnessReviews.txt; done
+ 1171  for i in $UNIQ_IDS; do cut -d "	" -f 8,9 $i.txt > ~/A2/CUSTOMERS/$i.helpfulnessReviews.txt; done
+ 1172  cd ../CUSTOMERS
+ 1173  ls
+ 1174  cd ..
+ 1175  rm -r CUSTOMERS
+ 1176  cd tempCustomers
+ 1177  for i in $UNIQ_IDS; do cut -d "	" -f 8,9 $i.txt > ~/A2/CUSTOMERS/$i.helpfulnessReviews.txt; done
+ 1178  cd ../CUSTOMERS
+ 1179  cd ..
+ 1180  mkdir CUSTOMERS
+ 1181  cd tempCustomers
+ 1182  for i in $UNIQ_IDS; do cut -d "	" -f 8,9 $i.txt > ~/A2/CUSTOMERS/$i.helpfulnessReviews.txt; done
+ 1183  cd ../CUSTOMRS
+ 1184  cd ../CUSTOMERS
+ 1185  ls
+ 1186  cd ..
+ 1187  ls
+ 1188  cd datamash-1.3
+ 1189  ls
+ 1190  for FILE in `ls `; do CORR=./datamash …. <$FILE` ; echo "$FILE $CORR" ; done
+ 1191  for FILE in ../CUSTOMERS/.helpfulnessReviews.txt; do CORR=./datamash …. <$FILE` ; echo "$FILE $CORR" ; done
+ 1192  for FILE in ../CUSTOMERS/.helpfulnessReviews.txt; do CORR=./datamash …. <$FILE ; echo "$FILE $CORR" ; done
+ 1193  for FILE in ../CUSTOMERS/*.helpfulnessReviews.txt; do CORR=./datamash …. <$FILE ; echo "$FILE $CORR" ; done
+ 1194  ls
+ 1195  for FILE in ../CUSTOMERS/*.helpfulnessReviews.txt; do CORR=./datamash …. <$FILE ; echo "$FILE $CORR" ; done
+ 1196  cd ..
+ 1197  ls
+ 1198  cd CUSTOMERS
+ 1199  ls
+ 1200  cd ..
+ 1201  cd datamash-1.3
+ 1202  ls
+ 1203  for FILE in ../CUSTOMERS/*.helpfulnessReviews.txt; do CORR=./datamash …. <$FILE ; echo "$FILE $CORR" ; done
+ 1204* for FILE in ~/A2/CUSTOMERS/*.helpfulnessReviews.txt; do CORR=./datamash …. <$FILE ; echo "$FILE $CORR" ; donefor FILE in ~/A2/CUSTOMERS/*.helpfulnessReviews.txt; do CORR=./datamash …. <$FILE ; echo "$FILE $CORR" ; donecmd
+ 1205  for FILE in ../CUSTOMERS/*.helpfulnessReviews.txt; do CORR=./datamash …. <$FILE' ; echo "$FILE $CORR" ; done
+ 1206  cd ..
+ 1207  cd CUSTOMERS
+ 1208  ls
+ 1209  for FILE in `ls `; do CORR=./datamash …. <$FILE` ; echo "$FILE $CORR" ; done
+ 1210  for FILE in `ls `; do CORR=./datamash …. <$FILE ; echo "$FILE $CORR" ; done
+ 1211  cd ..
+ 1212  ls
+ 1213  cd  datamash-1.3
+ 1214  ls
+ 1215  cd ..
+ 1216  history >cmds.log
